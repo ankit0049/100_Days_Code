@@ -1,6 +1,6 @@
 # 100 Day's Problem with Solution 
 
-> ### Day 1  
+> ## Day 1  
 > Maximum SubArray Product  
 
   Approach 1 : iterate 3 loop i , j & k product = product * k then taking max  o(n^3)
@@ -17,7 +17,7 @@
    ----
    ____
 
- ### Day 2  
+ ## Day 2  
  > Count Inversions  in Array 
  Approach 1: basic Approach is we Select the one and iterate on whole Array and left is greater right then count going to be +1  
 
@@ -62,4 +62,28 @@
            then we calculate the sum of the Squares S2 of the Array Element then we get (X & Y again )(Equation 2) 
            we solve the Equation and get X and Y means Missing and repeating value  
 
-           X+Y = (S2 - S2n) / (X-Y) [From equation 1, we get the value X-Y] ………… equat
+           X+Y = (S2 - S2n) / (X-Y) [From equation 1, we get the value X-Y] equate and get value  . 
+> 
+
+------
+----
+## Day 4 
+> #### Q-1 Maximum SubArraySum 
+Approach 1: iterate  i=n j=i (j<n) & k=j k(<n) array and sum += k and take max of all like max = Math.max(max,sum) then we get but it take O(n^3) complexity 
+
+Approach 2 : iterate i=n & (j=i ,j<n) sum+=j and take the max as previous this takes O(n^2) Complexity 
+
+Approach 3 : Optimal Approach Using Kadans Algoritham  we itearte one loop and take one sum =0 then we sum+=arr[i] and take maximum of (max,sum) and store in max and the next step we check our taken sum is <0 then sum makes to 0 sum=0  at the last max contain maximum sum   
+
+> #### Q-2   Sort 0 ,1's & 2's (without Sorting) 
+Approach 1 : brute force Approach is we just take 3 counter varible for count 0 ,1 & 2's then iterate loop for everone until count is not zero and stored in the array so we get [0,0,0,1,1,1,2,2,2] like this 
+
+Approach 2 : National Dutch Man Flag ALoritham  
+in this method we have 3 pointer low mid and high  to begin with low=0 , mid=0  high = n-1  we have 3 checks  
+1. arr[mid]==0 => then we do swap (low++,mid++) and increse by one both  
+
+2. arr[mid]==2 => then we have swap(mid ,high--) here we decre the high only 
+
+3. arr[mid]==1 so this is right position so we increse mid+1  
+
+
