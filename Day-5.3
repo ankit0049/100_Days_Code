@@ -1,0 +1,21 @@
+  public static void Combination2(ArrayList<Integer> a , ArrayList<<Integer>>ans , int target , int ind)
+  {
+    if(target==0)
+    {
+        ans.add(new ArrayList(a));
+        return;
+    } 
+    
+
+   for(int i=ind ; i<arr.length; i++)
+{  
+      if(i>ind && arr[i]==arr[i-1])  continue;
+    
+    if ( arr[i]> target) break ; 
+
+    a.add(arr[i]);
+    Combination2(a,ans,target-arr[i], i+1);
+    a.remove(a.size()-1);
+   }
+
+  }

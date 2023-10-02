@@ -1,4 +1,5 @@
-# 100 Day's Problem with Solution 
+# 100 Day's Problem with Solution  
+> Total Day = 5  , Total Problem Solved = 10
 
 > ## Day 1  
 > Maximum SubArray Product  
@@ -45,7 +46,7 @@
         [1 , 9]   [ 3]  here 1 > 3 false so we increse the count and now our counter point to 9 ( value) then check 9>3 increse the count and merge [1 ,3 ,9]  likewise all calls Happens  
 -----
 ----
-        ### Day3
+  ## Day3
         > Missing & Repeating Number
         Approach 1 : iterate the outer loop = n and in inner loop check the inner loop of i == outer loop value then counter increse to one if counter is 2 then return repeating value and if the counter is zero then return missing value  
 
@@ -85,5 +86,50 @@ in this method we have 3 pointer low mid and high  to begin with low=0 , mid=0  
 2. arr[mid]==2 => then we have swap(mid ,high--) here we decre the high only 
 
 3. arr[mid]==1 so this is right position so we increse mid+1  
+
+---- 
+---- 
+## Day 5 
+> #### Q-1 Print All Sum  
+In this We Use the Pick & Not Pick Case & Genrate tha All Possible Case & Print th sum   
+* We print  sum before the   calling and then at
+  the time of backtraking we print sum so 
+  all possible sum print 
+
+> #### Q-2 Combination Sum - 1    
+* We can Use one Element only once  
+  we have Given  array = [2,3,6,7], target = 7 ,
+Output: [[2,2,3],[7]] this Question Approach As Previous we Used in Q-1 here only we have Apply one check that is sum +arr[i]<= target then take it  in array that element 
+ and at the time of returning that array keep in array of array .
+ here at the time of Backtracking we pop out the last index of array so we can make not pick case or check all Possible  
+
+> #### Q-3 Combination Sum - 2   
+ Combination Sum 2 State that Print All Possible Sum that makes target but it should be Unique means [1,1,6]=8  [1,6,1] =8 so we consider only one  in Combination sum-1 it Consider 2 Solution  
+ but here we have to find Unique one 
+   
+
+   Approach 1 :
+ This going to be Same Approach as Used Combination Sum - 1 here at the time of returing we sort the Array and stored into set then  its give Unique Combinations   
+  
+  this Approach Takes extra time complexity  
+
+  Approach 2 :  
+  [1 ,1,1 ,2] (0 -> 2 index all are one if i am take 0th ind and make Combination or Start with 1th ind No Change or 2nd No Change So we have to skip if the iterateble i > ind & arr[i]=arr[i-1] same value so we doing continue we dont need to  manage recursion case because our i is iterate less then arr.length so we dont need to manage it) 
+  and one check if(arr[i]>target)loop break;  
+  in under loop
+  ds.add(i)
+  call for next 
+  ds.remove(i) => here i represent the arr element at the backTracing time we remove the last one
+> #### Q-4 Subset Sum - 1  
+   Subset Sum-1 is Same as Previous Approach we have to print all Subset sum so we use the take or not take case and genrate the all subset sum 
+   and we Use our virtual sum (means we pass sum in the call like sum+arr[i] so our actual sum not affected) at the time of backtracking we have to just increse the index dont need to update the sum beacause sum not updated for those sum only update for called index
+> #### Q-5 Subset Sum - 2  
+
+Subset Sum-2 is Totally depend on Subset sum-1 
+here inly we Use the Conatiner for Carrying that element in Previous we find sum so dont need to container to track which element make that sum but here we track element which Subset makes that target Sum 
+
+
+___ 
+___
 
 
