@@ -1,5 +1,5 @@
 # 100 Day's Problem with Solution  
-> Total Day = 5  , Total Problem Solved = 10
+> Total Day = 6 , Total Problem Solved = 12
 
 > ## Day 1  
 > Maximum SubArray Product  
@@ -131,5 +131,38 @@ here inly we Use the Conatiner for Carrying that element in Previous we find sum
 
 ___ 
 ___
+ 
+## Day 6 
+> #### Q-1 : nth Fibbonacci Number(Using DP) 
+The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones.
+Example we want 5th fibbonacci then we have to need the calculate the sum of  3rd & 4th 
+then for 3rd we have need to 1st & 2nd and for the 4rth we have to find 3rd & 2nd the Problem again Occur so we use DP (its Use for the Solving The Overlaping Problem)  
+ 
+> memoization  
+```java   
+
+if(dp[ind]!=-1) return dp[ind]
+return dp[ind]=fib(ind-1)+fib(ind-2);
+ 
+```
+> Tabulation  
+``` 
+int dp[] = new int[n]; 
+dp[0]=0 & dp[1]=1 
+for(2 to n)
+dp[i]=dp[i-1]+[dp-2]; 
+
+return dp[n]; 
+
+```
+> #### Q-2 Climbing Stairs  
+we have to reach nth Stairs and tell total possile ways to reach out at nth . we can move 1 stair or 2 at a time. 
+this Question Approach is Going to same as the Fibbonaci one . 
+Base Case at 0th & 1st take 1 total ways to  reach at nth stair . and follow the fibbonaci tabulation.
+we can Space Optimization Also Using The Varibles be Store the Previous and the Last Previous and calculate . 
+
+
+
+
 
 
