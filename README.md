@@ -159,8 +159,18 @@ return dp[n];
 we have to reach nth Stairs and tell total possile ways to reach out at nth . we can move 1 stair or 2 at a time. 
 this Question Approach is Going to same as the Fibbonaci one . 
 Base Case at 0th & 1st take 1 total ways to  reach at nth stair . and follow the fibbonaci tabulation.
-we can Space Optimization Also Using The Varibles be Store the Previous and the Last Previous and calculate . 
+we can Space Optimization Also Using The Varibles be Store the Previous and the Last Previous and calculate .  
 
+---- 
+----
+
+## Day 7
+> #### Rotate Matrix 90deg 
+Approach:
+
+Step 1: Transpose the matrix. (transposing means changing columns to rows and rows to columns)
+
+Step 2: Reverse each row of the matrix.
 
 
 
