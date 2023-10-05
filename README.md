@@ -170,7 +170,39 @@ Approach:
 
 Step 1: Transpose the matrix. (transposing means changing columns to rows and rows to columns)
 
-Step 2: Reverse each row of the matrix.
+Step 2: Reverse each row of the matrix.  
+----
+----
+
+
+
+## Day 8  
+> #### Q-1 Next Greater Element in Circular Array  
+[1,9,2,8,1,2,11] => [9,11,8,11,11,11,-1] 
+this is the Next Greater elemnt Array 
+
+Here We use Stack and start to iterate from the at the end and check arr[i]>st.peek() => push into stack & NGE array Also arr[i]<st.peek() => pop()
+until this condition is going to failed for the circular one we iterate 1 to 2*n-1 and take it (i % length of real one (n)) 
+
+Time Coplexity O(2n + 2n) => O(n)
+Space Complexity O(n) 
+
+> #### Q-2 Preorder  & Postorder & Inorder Traversal  
+For Preorder we have to Remember  
+
+* PreOrder => Root -> left -> right  
+* PostOrder => left->right->Root  
+* InOrder  => left-> Root -> right 
+
+ this order we have to call 
+root is always print and other one is going to call 
+like 
+Traversal(root.left) & (root.right) 
+the stop condtion is root==null so return 
+
+
+
+
 
 
 

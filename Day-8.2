@@ -1,0 +1,28 @@
+public static void Traversal(Node root)
+{
+    if(root==null)
+    return;
+
+  // PreOrder 
+  System.out.println(root.val);
+  Traversal(root.left);
+  Traversal(root.right);
+  
+
+  
+  // PreOrder 
+ 
+  Traversal(root.left);
+  Traversal(root.right); 
+   System.out.println(root.val);
+  
+
+
+  
+  // Inorder
+  Traversal(root.left); 
+  System.out.println(root.val);
+  Traversal(root.right);
+  
+  
+  }
