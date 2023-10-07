@@ -1,0 +1,33 @@
+public static TappedWater( int arr[], int count)
+{
+    int l=0 , r=arr.length-1;
+    int lMax=0 , rMax=0;
+    while(l<r)
+    {
+        if(arr[l]<=arr[r])
+        {
+            if(arr[l]>=lMax)
+            {
+                lMax=arr[l];
+            }
+            else 
+            {
+                count+=lMax-arr[l];
+            }
+
+        } 
+        else 
+        {
+              if(arr[r]>=rMax)
+            {
+                rMax=arr[r];
+            }
+            else 
+            {
+                count+=rMax-arr[r];
+            }
+
+        } 
+        return count;
+    }
+}

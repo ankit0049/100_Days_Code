@@ -1,0 +1,11 @@
+public static void DepthOfTree(Node root)
+{
+    if(root==null)
+    {
+        retun 0;
+    }
+    int lft = DepthOfTree(root.left);
+    int rht = DepthOfTree(root.right);
+
+    return 1 + max(lft , rht);
+}

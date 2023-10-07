@@ -206,7 +206,66 @@ the stop condtion is root==null so return
 
 ---- 
 ----
+# Day -10
+> #### Q-1 Rain Water Trapping Problem
+In this Problem we have Given One Array Numbers That behave like block and you have to tell the 
+maximum Trapped water into Block .
 
+> Approach 1 : Left Array: For each block, we find the maximum block height on its left side.
+
+Example: If the blocks have heights [1, 4, 2, 6, 1], the left array would be [1, 4, 4, 6, 6].
+
+Right Array: For each block, we find the maximum block height on its right side.
+
+Example: Using the same heights [1, 4, 2, 6, 1], the right array would be [6, 6, 6, 6, 1].
+
+Minimum of Left and Right: We then find the minimum height between the left and right arrays. This represents the maximum height of water the block can hold.
+
+Example: If we have [1, 4, 4, 6, 1], this means the water level is at most 4 units high.
+
+Check if Water Can Be Trapped: We compare the minimum height with the actual block height. If the block height is equal to or greater than the water level, it means there's no water trapped (height - water level is 0).
+
+Example: For the blocks [1, 4, 4, 6, 1], only the middle two blocks can trap water. The trapped water amounts to min[i] - arr[i].
+
+So, in this example, we have 4 - 4 = 0 units of water trapped. 
+
+
+> Approach 2:  
+This i sgoing to be Same but Here We not use any extra Space we work on Pointers and takel that left & right array Usage .
+
+here we take left=0 & right=n-1 pointers and take the leftMax=0 & rightMax=0 intial and take Counter=0 
+for the traping water the condition are following :
+* left < right   
+      1 . we check left[i]<=right[i]  if true    
+
+          1.1  then we check left[i]>=leftMax if true so we update our leftMax=left[i]
+          means we get maximum height Block
+          1.2 else part we update counter = leftMax-left[i] this going to tell the trapped water count  
+           
+
+           left++
+
+
+    2. left[i]>right[i] 
+          
+           2.1  we check right[i]>=rightMax so we Update our rightMax because we get the maximum piller that conatin more water 
+
+           2.2 else we increse the count = rightMax-right[i]  
+
+           right--
+
+> #### Q-2 Maximum Depth In Tree 
+we Have 2 Approaches Using levelOrder & Using Recursion in this I solved Recursive Approach 
+.we Pass root if root become null we return 0 ; then call for left(root.left) then call for right(root.right) and take the max(left,right)+1 return 
+
+         
+
+
+
+
+    
+
+            
 
 
 
