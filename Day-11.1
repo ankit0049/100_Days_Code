@@ -1,0 +1,38 @@
+// Memoization 
+
+public static void NinjaTraining ( int day , int lastTask, int task[][] ,int dp[][])
+{
+    if(dp[day][lastTask]!=-1)
+    {
+        return dp[day][lastTask];
+    }
+    if(day==0)
+    {
+          int maxi=0;
+          for(int i=0; i<3; i++)
+          /*  why we iterate 0->2 because we have only 
+           3 columns [0,1,2] 
+           for iterating single day we use this */
+          {
+              if(i!=last)
+              {
+                maxi =Math.max(maxi,task[0][i]);
+              }
+          } 
+          return maxi;
+    } 
+ 
+
+    // Tabulation 
+
+
+    for(int i=0; i<3; i++)
+    {
+        if(i!=last)
+        {
+            activity = task[day][i] + NinjaTraining(day-1,i,task,dp);  
+            maxi = Math.max(maxi,activity);
+        }
+    } 
+    return dp[day][lastTask] = maxi;
+}

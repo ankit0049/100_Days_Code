@@ -1,0 +1,30 @@
+
+public static void NextPermutation(int arr[])
+{ 
+    int ind = -1;
+    for(int i=arr.length-1; i>0; i--)
+    {
+        if(arr[i]>arr[i-1]) 
+        {
+            ind=i;
+        }
+    }
+     if(ind==-1)
+     {
+     revrse(arr); // simply revrse this is not implemented here
+     }
+    else(ind!=-1)
+    {
+        for(int i=arr.length; i>=ind; i--)
+        {
+            if(arr[i]>arr[ind])
+            {
+                swap(i,ind,arr);
+                break;
+            }
+        }
+    } 
+
+    reverse(arr,ind+1,arr.length);
+
+}

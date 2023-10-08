@@ -2,7 +2,7 @@
 > Total Day = 6 , Total Problem Solved = 12
 
 > ## Day 1  
-> Maximum SubArray Product  
+>  #### Maximum SubArray Product  
 
   Approach 1 : iterate 3 loop i , j & k product = product * k then taking max  o(n^3)
 
@@ -19,7 +19,7 @@
    ____
 
  ## Day 2  
- > Count Inversions  in Array 
+ > #### Count Inversions  in Array 
  Approach 1: basic Approach is we Select the one and iterate on whole Array and left is greater right then count going to be +1  
 
  Approach 2 : this Approach is Basically Based on the Merge Sort Useally we sort using the comparision and then merge if we compared our left part with the right part then if our left lowest value is greter then right so count is going to be plus equal the length of the left part 
@@ -47,8 +47,9 @@
 -----
 ----
   ## Day3
-        > Missing & Repeating Number
-        Approach 1 : iterate the outer loop = n and in inner loop check the inner loop of i == outer loop value then counter increse to one if counter is 2 then return repeating value and if the counter is zero then return missing value  
+> #### Missing & Repeating Number   
+
+Approach 1 : iterate the outer loop = n and in inner loop check the inner loop of i == outer loop value then counter increse to one if counter is 2 then return repeating value and if the counter is zero then return missing value  
 
         Approach 2 : Using Hashing or Hashmap we add all Values in the HashMap and the iterate on the Hash array or HashMap and check the repeated value and check 1 to n which in not in Hash Array or Hashmap return in Missing that Value
 
@@ -169,8 +170,8 @@ we can Space Optimization Also Using The Varibles be Store the Previous and the 
 Approach:
 
 Step 1: Transpose the matrix. (transposing means changing columns to rows and rows to columns)
-
-Step 2: Reverse each row of the matrix.  
+ 
+ #### Step 2: Reverse each row of the matrix.  
 ----
 ----
 
@@ -261,6 +262,45 @@ we Have 2 Approaches Using levelOrder & Using Recursion in this I solved Recursi
          
 
 
+
+----
+---
+> # Day-11 
+> #### Q-1 Ninja's Training [DP]
+The Problem state that ninja's have n*3 Matrix there three task ninjas's can perform anyone at sigle day. he can't do same task in next day so You have to find the maximum value get By Performing take ninja's can , earn.
+ 
+ > Why Greedy Not Work 
+
+{ [10 , 40, 60] ,[100 , 10 , 190] }  
+according to Greedy we Take for every array max 
+so in day-1 we take 60 (Q.state you not perform same task at next day) we cant able to chose 190 so max is 100 so total is 160 but here the Maximum is 230 (perform 1st -40 then 2nd -> 190) all condition fullfill & this is the max
+
+> When Greedy Fails We have to Check All Possible Combination 
+For checking the all possible combination Recursion comes and then for reducing the overlapping we use Dp here. 
+
+
+here we check all posible and Use day for perform task and one last varible that helps to tell this task done previous so we not take that and then return the maximum 
+
+``` 
+ 3 Important Rules for Applying Dp or Recusion 
+
+ 1. if Your Question is not index Based So canged into indexing  
+ 2.  Do all Possible Stuffs on That Index.
+ 3. Perfom The task that Question States
+
+``` 
+here we take our Day As Index . 
+
+>  Q.2 Next Permutation
+
+Find the break-point, i: Break-point means the first index i from the back of the given array where arr[i] becomes smaller than arr[i+1].
+For example, if the given array is {2,1,5,4,3,0,0}, the break-point will be index 1(0-based indexing). Here from the back of the array, index 1 is the first index where arr[1] i.e. 1 is smaller than arr[i+1] i.e. 5.
+To find the break-point, using a loop we will traverse the array backward and store the index i where arr[i] is less than the value at index (i+1) i.e. arr[i+1].
+If such a break-point does not exist i.e. if the array is sorted in decreasing order, the given permutation is the last one in the sorted order of all possible permutations. So, the next permutation must be the first i.e. the permutation in increasing order.
+So, in this case, we will reverse the whole array and will return it as our answer.
+If a break-point exists:
+Find the smallest number i.e. > arr[i] and in the right half of index i(i.e. from index i+1 to n-1) and swap it with arr[i].
+Reverse the entire right half(i.e. from index i+1 to n-1) of index i. And finally, return the array.
 
 
     
