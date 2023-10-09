@@ -302,11 +302,33 @@ If a break-point exists:
 Find the smallest number i.e. > arr[i] and in the right half of index i(i.e. from index i+1 to n-1) and swap it with arr[i].
 Reverse the entire right half(i.e. from index i+1 to n-1) of index i. And finally, return the array.
 
+-----
+-----
+
+> ## Day 12  
+
+> #### Q.-1 Merge Intervals Overlapping Problem 
 
     
+Approach 1:  Since we have sorted the intervals, 
+the intervals which will be merging are bound to 
+ be adjacent. We kept on merging simultaneously 
+  as we were traversing through the array and when
+   the element was non-overlapping we simply inserted 
+   the element in our answer list.
+ 
+ ```java  
+ 
+ 
+if(matrix[i-1][1]>matrix[i][0]) then 
+we consider there matrix[i][1] and place that 
+value & we get updated interval  
+```
 
             
 
+----
+----
 
 
 
