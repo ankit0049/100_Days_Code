@@ -328,7 +328,40 @@ value & we get updated interval
             
 
 ----
-----
+---- 
+
+> ## Day -13 
+
+Approach 1 :
+We Use the Linear Search and iterate the loop 
+on to the matrix and check arr[i][j]==target 
+if right then return true otherwise return 
+false 
+
+
+Approach 2 : 
+
+We have given the matrix in sorted order.
+so we Search the Which Row 
+have our Target then pass that row in binary Search 
+and search the target 
+
+for(int i=0; i<n; i++)
+{
+    if(mat[i][0]<=target && mat[i][m-1]>=target)
+    {
+        binarySearch(mat[i], target);
+    }
+}
+  
+Time Complexity o(nxm)log(nxm) 
+
+
+Approach 3 : 
+
+we know our Array is sorted 
+we flatten the array into 1D Hypthetically 
+and 0-> n+m length -1  and apply Binary search .
 
 
 
