@@ -364,5 +364,84 @@ we flatten the array into 1D Hypthetically
 and 0-> n+m length -1  and apply Binary search .
 
 
+---
+---
+> ## Day 14
+> #### Q 3 Sum Problem
+Approach 1 : we Just Consider three loops 
+and check all triplates that makes that sum or (0). 
+
+for(int i=0; i<n ; i++) 
+{
+   for(int j = i+1; j<n; j++)
+   
+   { 
+
+    for(int k =j+1; k<n; k++)  ' 
+
+     {
+   int sum = arr[i]+arr[j]+arr[k];
+   if(sum==0)
+   {
+    set.add({arr[i], arr[j], arr[k]})
+   }
+   
+     }
+  
+   } 
+
+}
+
+Time Complexity o(n^3)
 
 
+Approach 2 : 
+Better Approach is 
+we add in HasSet value and take two varible sum and multiply by (-) sign and check that avilabel or not But we Direct push value in HashSet so our Value Used Repatead time we have to use 
+only once { 2 , 3 4} target =4 only one way(4 taking 4 but here that consider 2 as multiple we Use Pointer and Update the Hashset)
+ 
+  Arrays.sort(arr);
+ for(int i=0; i<n ; i++)  
+ {
+    st = new HashSet();  
+    for(int j =i+1; j<n ; j++)    
+
+    {
+        int value = -1*(arr[i]+arr[j]); 
+
+        if(st.contains(value))
+        {triplet .add( {arr[i], arr[j] , (-1* arr[i]+arr[j])});
+        } 
+         set.add(arr[j])
+    }
+ }  
+
+Approach 2 & 3 Time Complexity same BUt here
+we Use Extra space in HashSet .
+
+ Approach 3: 
+ To begin with be Sort the Array and  
+ take 3 pointer i , j & k 
+ we Plce them i=0, j=i+1, k=n-1 
+ and we iterate the loop from 
+ (i=0 -> n-1) and inside that we 
+ check(j<k) if, then we implement  
+ the main Stuffs we check 
+ sum= arr[i] + arr[j] + arr[k];
+ if(sum<0) j++
+ if(sum>0)k--;
+ else {
+  ans.add({arr[i],arr[j], arr[k]}) 
+  j++; 
+  k--; 
+  
+  while(j<k &&arr[j]==arr[j-1]) j++; 
+  
+  while( j<k arr[k]==arr[k+1] )k--;
+ } 
+
+ for Code Check Out Day 14 Code file 
+
+ ---
+ ---
+ 
