@@ -1,0 +1,28 @@
+Approach 1 : 
+Basically we Use The anthore stack and push our new element with our stack element 
+again we add in our orginal one likewise we get the added element at the bottom of the stack 
+
+
+Approach 2 : 
+
+We use The recusion calling and
+popup the elemnt and store in sum varible
+and when our stack is empty we add the new 
+element and return . 
+so at the return means at the time of backtrack we add that element again 
+like st.add(varible)
+
+
+Approach 2 code : 
+
+Public static void Code(Stack<Integer>st)
+{
+    if(st.empty())
+    {
+        st.add(newElement);
+        return;
+    }
+    int Popped = st.pop();
+    code(st);
+    st.add(Popped);
+}
