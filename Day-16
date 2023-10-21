@@ -1,0 +1,25 @@
+
+
+Public Static Void Rotate(Node Head , int k)
+{
+    int len =0;  
+    Node temp = head;
+    while(temp->next!=null)
+    {
+        ++len ;
+        temp=temp.next;
+    }
+    temp.next=head; 
+    k=len%k;
+    int rotationPoint = len - k ;
+    
+    while(--rotationPoint!=0)
+    {
+       temp=temp.next;
+
+    } 
+    head = temp.next;
+    temp.next=null;
+
+    return head ;
+}

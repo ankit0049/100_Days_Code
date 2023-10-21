@@ -444,4 +444,55 @@ we Use Extra space in HashSet .
 
  ---
  ---
+ > ## Day 15
+ > #### Q . Element add in Bottom of The Stack
  
+Approach 2 : 
+
+We use The recusion calling and
+popup the elemnt and store in sum varible
+and when our stack is empty we add the new 
+element and return . 
+so at the return means at the time of backtrack we add that element again 
+like st.add(varible)
+
+
+Approach 2 code : 
+```java
+Public static void Code(Stack<Integer>st)
+{
+    if(st.empty())
+    {
+        st.add(newElement);
+        return;
+    }
+    int Popped = st.pop();
+    code(st);
+    st.add(Popped);
+} 
+``` 
+  
+
+  -----
+  ----- 
+
+  > ## Day 16 
+  > #### Q Rotate LinkedList 
+
+  Approach 1 : 
+Simply We Iterate and check it is last node if 
+yes then we connect that with head and make headof this and reduce
+count with 1 .
+
+O(k*n)
+it takes n iteration for k rotation.
+
+
+
+Approach 2 : 
+With Better Approach We Count the length of the 
+linkedlist and now we are on the last node .
+we connect last node with head so our linkedlist 
+changed to circular one Now we have to Break 
+the linkedlist with Point len-k and make that Node to
+head ;
