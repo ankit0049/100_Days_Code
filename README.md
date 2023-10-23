@@ -303,7 +303,8 @@ Find the smallest number i.e. > arr[i] and in the right half of index i(i.e. fro
 Reverse the entire right half(i.e. from index i+1 to n-1) of index i. And finally, return the array.
 
 -----
------
+----- 
+
 
 > ## Day 12  
 
